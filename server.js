@@ -33,19 +33,11 @@ app.use('/api', rutasApi);
 
 app.get('/', (req, res) => {
   res.render('index.hbs', {
-    mostrarProductos: false,
     productos,
     info: [{name:'nombre'},
     {name:'precio'},
     {name:'imagen'},
     {name:'descripcion'}],
-  });
-});
-
-app.get('/productos', (req, res) => {
-  res.render('index', {
-    mostrarProductos: true,
-    productos,
   });
 });
 

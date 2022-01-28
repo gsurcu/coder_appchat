@@ -9,21 +9,27 @@
   <link rel="stylesheet" href="./normalize.css">
 </head>
 <body>
-  <h1>Chat Coderhouse</h1>
-  {{#if mostrarProductos}}
-    <h2>Vista de Productos</h2>
-    <div class="cards">
-      {{> prod}}
-    </div>
-    <a href="/" class="">Volver al inicio</a>
-  {{else}}
-    <h2>Ingresa un producto</h2>
-    {{> form}}
-    <a href="/productos">
-      <button class="">Mostrar productos</button>
-    </a>
-  {{/if}} 
+  <main>
+    <h1>Chat Coderhouse</h1>
 
-  {{{body}}}
+      <div class="seccion">
+        <div class="form">
+          <h2 class="azul">Ingrese un producto</h2>
+          {{> form}}
+        </div>
+
+        <div class="productos">
+          <h2 class="azul">Vista de Productos</h2>
+          <div class="cards">
+            {{> prod}}
+          </div>
+        </div>
+      </div>
+
+    {{{body}}}
+    
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/index.js"></script>
+  </main>
 </body>
 </html>

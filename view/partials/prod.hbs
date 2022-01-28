@@ -1,11 +1,20 @@
+<article id="0" class="container-card">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Nombre</h4>
+          <h4 class="card-text">Precio</h4>
+        </div>
+        <div class="card-img"><h4>Imagen</h4></div>
+      </div>
+    </article>
 {{#each productos}}
   <article id={{this.id}} class="container-card">
       <div class="card">
-        <img src={{this.imagen}} alt={{this.nombre}}/>
         <div class="card-body">
           <h4 class="card-title">{{this.nombre}}</h4>
-          <p class="card-text">Precio: {{this.precio}}</p>
+          <h4 class="card-text">{{this.precio}}</>
         </div>
+        <img class="card-img" src={{this.imagen}} alt={{this.nombre}}/>
       </div>
     </article>
 {{/each}}

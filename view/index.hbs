@@ -1,8 +1,10 @@
-  <div id="messages"></div>
-  
-  <input type="text" name="nombreUsuario" id="nombreUsuario" placeholder="Introduzca su nombre">
-  <input type="text" name="" id="mensaje" placeholder="Cuentanos algo...">
-  <button type="button" onclick="sendMessage()">Enviar</button>
 
-  <script src="/socket.io/socket.io.js"></script>
-  <script src="/index.js"></script>
+<div id="appChat" class="seccion">
+  <h2 class="azul">Centro de mensajes</h2>
+  <div class="form">
+    <input required type="email" name="nombreUsuario" id="nombreUsuario" placeholder="Introduzca su mail">
+    <div id="messages"></div>
+    <input required type="text" name="" id="mensaje" placeholder="Ingrese un mensaje...">
+    <button type="button" onclick="sendMessage()">Enviar</button>
+  </div>
+</div>

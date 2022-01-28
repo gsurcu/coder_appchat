@@ -1,9 +1,11 @@
 const socket = io()
 
 function sendMessage() {
+  const hoy = new Date()
   const message = {
-    nombre: document.getElementById("nombreUsuario").value,
-    text: document.getElementById("mensaje").value
+    mail: document.getElementById("nombreUsuario").value,
+    text: document.getElementById("mensaje").value,
+    fecha: hoy.toLocaleDateString() + ' ' + hoy.getHours() + ':' + hoy.getMinutes() + ':' + hoy.getSeconds()
   };
 
   socket.emit("incomingMessage", message);
@@ -15,8 +17,9 @@ socket.on("chat", messages => {
   const texto = messages.map( mensaje => {
     return(`
     <div>
-      <strong>${mensaje.nombre}: </strong>
-      <em>${mensaje.text}</em>
+      <strong class="azul">${mensaje.mail} </strong>
+      [<span class="marron">${mensaje.fecha}</span>]:
+      <em class="verde"> ${mensaje.text}</em>
     </div>`);
   }).join(" ")
 

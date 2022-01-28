@@ -2,61 +2,70 @@ body {
   padding: 0;
   margin: 0;
 }
-main {}
-form {}
-label {}
-input {}
-textarea {}
-.btn {}
-
+main {
+  margin: auto;
+  width: 90%;
+}
+h2 {
+  margin: 1rem 0;
+}
+.azul {
+  color: #00f;
+}
+.verde {
+  color: #0b0;
+}
+.marron {
+  color: #a53;
+}
+.seccion {
+  margin: .6rem 0;
+  background-color: #dde;
+  padding: .4rem 1rem 1rem;
+}
 .cards {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
+  background-color: #222;
+  color: #eee;
 }
 .container-card {
-  position: relative;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  flex: 0 0 100%;
+  padding: .3rem 15px;
   max-width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: .3rem;
+  border: 1px solid #fff3;
 }
 .card {
   border-radius: .3rem;
   display: flex;
-  flex-direction: column;
-  border: 1px solid rgba(0,0,0,.125);
-  border-radius: 0.25rem;
-  flex: 1 1;
+  justify-content: space-between;
 }
 .card img {
   object-fit: cover;
   max-width: 100%;
   align-self: center;
-  max-height: 15rem;
+  max-height: 4rem;
 }
 .card p {
   margin: 0;
 }
-
+.card h4 {
+  padding: .7rem 0;
+}
 .card-body {
-  padding: .7rem;
-  width: 100%;
+  /* padding: .7rem; */
+  width: calc(100% - 8rem);
   display: flex;
-  flex-direction: column;
-  flex: 1 1;
   justify-content: space-between;
 }
 
-@media only screen and (min-width: 768px) {
-  .container-card {
-    flex: 0 0 25%;
-    max-width: 25%;
-  }
-  .card img {
-    max-height: 20vw;
-  }
+.form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form input, .form button {
+  margin: .4rem 0;
+  padding: .2rem .45rem;
 }
