@@ -2,7 +2,7 @@ const socket = io()
 
 function sendMessage() {
   const message = {
-    nombre: document.getElementById("nombre").value,
+    nombre: document.getElementById("nombreUsuario").value,
     text: document.getElementById("mensaje").value
   };
 

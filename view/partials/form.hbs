@@ -1,0 +1,21 @@
+  {{#if mostrarProductos}}
+  {{else}}
+  <form action='/api/productos' method="POST">
+  {{#each info}}
+    <label
+      for={{this.name}}
+      class="none">
+    </label>  
+    <input
+      type="text"
+      id={{this.name}}
+      name={{this.name}}
+      placeholder="Ingrese {{this.name}} del producto"
+      required
+    >
+  {{/each}}
+    <div>
+      <input type="submit" value="Upload Data">
+    </div>
+  </form>
+  {{/if}}
